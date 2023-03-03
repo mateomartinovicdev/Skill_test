@@ -52,4 +52,4 @@ def decodeMorse(morseCode, morse_dict)
   return word.strip
 end
 
-puts decodeMorse('···−−−···', morse_dict)
+puts decodeMorse(, morse_dict)

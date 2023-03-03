@@ -35,21 +35,21 @@ morse_dict = {
   "7" => "--...",
   "8" => "---..",
   "9" => "----.",
-  "0" => "-----"
+  "0" => "-----",
+  "SOS" => "...---...",
+  "." => ".-.-.-"
 }
-
-
 def decodeMorse(morseCode, morse_dict)
   morse_words = morseCode.split("   ")
   word = ""
   morse_words.each do |morse_word|
     morse_letters = morse_word.split(" ")
     morse_letters.each do |morse_letter|
-      word += morse_dict.key(morse_letter)
+      word += morse_dict.key(morse_letter).to_s
     end
     word += " "
   end
   return word.strip
 end
 
-puts decodeMorse('.... . -.--   .--- ..- -.. .', morse_dict)
+puts decodeMorse('···−−−···', morse_dict)
